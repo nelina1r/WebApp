@@ -40,8 +40,8 @@ public class ReverseStringController {
         return "index";
     }
 
-    @PostMapping("/calculate")
-    public String calculate(@ModelAttribute ReverseStringDto reverseStringDto, HttpSession session) {
+    @PostMapping("/reverse")
+    public String reverse(@ModelAttribute ReverseStringDto reverseStringDto, HttpSession session) {
         ResultDto resultDto = service.revert(reverseStringDto);
 
         session.setAttribute("reverseStringDto", reverseStringDto);
