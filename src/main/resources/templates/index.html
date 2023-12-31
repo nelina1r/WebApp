@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>String Reverser</title>
 
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,29 +12,14 @@
 
 <div class="container mt-5">
 
-    <h2 class="mb-4">Simple Calculator</h2>
+    <h2 class="mb-4">Simple String Reverse</h2>
 
-    <form action="#" th:action="@{/calculate}" th:object="${calculatorData}" method="post">
+    <form action="#" th:action="@{/calculate}" th:object="${reverseStringDto}" method="post">
 
         <div class="form-row">
             <div class="form-group col-md-3">
-                <label for="firstNumber">First Number:</label>
-                <input type="text" class="form-control" id="firstNumber" th:field="${calculatorData.firstNumber}" required/>
-            </div>
-
-            <div class="form-group col-md-2">
-                <label for="operation">Operation:</label>
-                <select class="form-control" id="operation" th:field="${calculatorData.operand}" required>
-                    <option value="ADD">+</option>
-                    <option value="SUBTRACT">-</option>
-                    <option value="MULTIPLY">*</option>
-                    <option value="DIVIDE">/</option>
-                </select>
-            </div>
-
-            <div class="form-group col-md-3">
-                <label for="secondNumber">Second Number:</label>
-                <input type="text" class="form-control" id="secondNumber" th:field="${calculatorData.secondNumber}" required/>
+                <label for="firstNumber">Text to reverse:</label>
+                <input type="text" class="form-control" id="firstNumber" th:field="${reverseStringDto.text}" required/>
             </div>
 
             <div class="form-group col-md-3">
@@ -43,7 +28,7 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Calculate</button>
+        <button type="submit" class="btn btn-primary">Reverse</button>
 
     </form>
 
