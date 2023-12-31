@@ -4,14 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * DTO результата вычислений
+ * DTO результата конкатенации
  *
- * @author Alexander Dedov
+ * @author Anton Loyko
  * @since 28.12.2023
  */
 @Data
 @AllArgsConstructor
 public class ResultDto {
 
-    private Double result;
+    private String result;
 }
