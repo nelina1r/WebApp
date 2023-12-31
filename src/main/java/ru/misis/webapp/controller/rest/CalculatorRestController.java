@@ -18,13 +18,13 @@ import ru.misis.webapp.service.CalculatorService;
  * @since 28.12.2023
  */
 @RestController
-@RequestMapping("/api")
-public class RestControllerCalculator {
+@RequestMapping("/api/dev")
+public class CalculatorRestController {
 
     private final CalculatorService service;
 
     @Autowired
-    public RestControllerCalculator(CalculatorService service) {
+    public CalculatorRestController(CalculatorService service) {
         this.service = service;
     }
 

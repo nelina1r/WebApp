@@ -1,6 +1,8 @@
 package ru.misis.webapp.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * DTO с полями для калькуляции
@@ -9,6 +11,8 @@ import lombok.Data;
  * @since 28.12.2023
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CalculatorDataDto {
 
     private Double firstNumber;

@@ -29,10 +29,8 @@ public class CalculatorController {
 
     @GetMapping("/")
     public String indexPage(Model model, HttpSession session) {
-        // Получаем объект calculatorData из сессии
         CalculatorDataDto calculatorData = (CalculatorDataDto) session.getAttribute("calculatorData");
 
-        // Если объект отсутствует, создаем новый
         if (calculatorData == null) {
             calculatorData = new CalculatorDataDto();
             session.setAttribute("calculatorData", calculatorData);
